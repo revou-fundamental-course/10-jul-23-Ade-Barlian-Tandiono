@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1> KALKULATOR BMI</h1>
+        <h2> Hitung BMI (body mass index) kamu sekarang!</h2>
+    </header>
+<!-- Kontainer kalkulator -->
+    <div class="container" id="container">
+        <div class="calculator-container" id="calculator-container">
+            <div class="calculator-form" id="calculator-form">
+                <p>Jenis Kelamin :</p>
+                    <form action="">
+                        <input type="radio" id="male" name="gender" value="Laki - laki" > Laki - laki
+                        <input type="radio" id="female" name="gender" value="Perempuan" > Perempuan
+                    </form>
+                <p>Tinggi badan (cm):</p>
+                    <input type="number" id="height-input" name="height-input" placeholder="height input">
+                <p>Berat badan (kg):</p>
+                    <input type="number" id="weight-input" name="weight-input" placeholder="weight input">
+                <p>Usia (tahun) :</p>
+                    <input type="number" id="age-input" name="age-input" placeholder=" age input">
+        <br><br>
+                <button id="calculate" onclick="genderResult(); ageResult(); emptyCheck();">Calculate</button>
+            </div>
+<!-- Kontainer penjelasan BMI -->
+            <div class="calculator-explanation" id="calculator-explanation">
+                <p>Keunggulan Fitur :</p>
+                <ol>
+                    <li>Menghitung Berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ol>
+                <p>
+                    Kalkulator ini hanya boleh digunakan oleh orang dewasa dan tidak ada tindakan yang
+                    harus diambil berdasarkan nilainya selain berkonsultasi dengan dokter.
+                </p>
+                <p>
+                    Kalkulator akan memberikan anda gambaran perbandingan berat dan tinggi badan dengan
+                    nilai umum indeks massa tubuh (BMI) menggunakan rumus BMI = Kg / M<sup>2</sup>
+                </p>
+            </div>
+        </div>
+<!-- Kontainer hasil perhitungan -->
+        <div class="result-container" id="result-container">
+            <div id="gender-result" class="gender-result"></div>
+            <div id="age-result" class="age-result"></div>
+            <div id="result" class="result"></div>
+            <p id="result-statement" class="result-statement"></p>
+            <script src="./js/index.js"></script>
+        </div>
+    </div>
+    <footer>
+        Copyright © Adebete 2023
+    </footer>
+</body>
+</html>
